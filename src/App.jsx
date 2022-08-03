@@ -1,13 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useEffect, useState } from 'react'
+import Header from "./components/Header"
+import Proyectos from "./components/Proyectos"
+import SocialBar from "./components/SocialBar"
+import Footer from "./components/Footer"
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [lang, setLang] = useState("en");
+  
+
+  useEffect(() => {
+    var ln = window.navigator.language || navigator.browserLanguage;
+    if(ln.includes("es")) {
+      setLang("es")
+    }
+  }, [])
 
   return (
     <div className="App">
-      Hola
+      <Header />
+
+      <Proyectos />
+
+      <SocialBar />
+
+      <Footer />
     </div>
   )
 }
