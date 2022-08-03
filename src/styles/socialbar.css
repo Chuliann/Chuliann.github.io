@@ -2,7 +2,7 @@
 #socialbar {
     position: fixed;
     width: 40px;
-    left: 0;
+    left: 5px;
     bottom: 0;
     right: auto;
 }
