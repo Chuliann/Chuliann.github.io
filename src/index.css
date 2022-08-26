@@ -3,18 +3,31 @@
   src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap");
   font-display: swap;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 :root {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 
+  --paleta1: #231955;
+  --paleta2: #1F4690;
+  --paleta3: #E8AA42;
+  --paleta4: #fcedd1;
+
   --gris-oscuro: #24272e;
   --blanco: #ffffff;
-  --gris-claro: #f5f5f5;
+  --gris-claro: #e7e7e7;
   --gris: #94a3b8;
   --gris-oscuro: #64748b;
   --negro: #000;
+  --nav-heigth: 90px;
+  --violeta: #660085;
+  --fondo: #111016;
+  --navbar: #0c0b0e;
 
   color-scheme: light dark;
 
@@ -27,11 +40,12 @@
 
 body {
   font-size: 1.6rem;
-  background-color: var(--gris-claro);
+  background-color: var(--fondo);
   overflow-x: hidden;
   line-height: 1.3;
   font-family: 'Raleway', sans-serif;
   margin: 0;
+  padding-top: var(--nav-heigth);
 }
 html {
   font-size: 62.5%;
@@ -45,4 +59,25 @@ html {
 
 h1, h2, h3, h4, p {
   margin: 0;
+  color: var(--blanco);
+}
+
+body.blur {
+  overflow: hidden;
+}
+
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--negro);
+  border-radius: 10px;
 }

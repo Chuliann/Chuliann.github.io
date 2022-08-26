@@ -7,13 +7,15 @@ import Footer from "./components/Footer"
 function App() {
 
   const [lang, setLang] = useState("en");
-  
+
+ 
 
   useEffect(() => {
     var ln = window.navigator.language || navigator.browserLanguage;
-    if(ln.includes("es")) {
+    if (ln.includes("es")) {
       setLang("es")
     }
+    
   }, [])
 
   return (

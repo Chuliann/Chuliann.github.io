@@ -50,6 +50,7 @@
 }
 
 .proyecto-enlaces {
+    display: flex;
     position: absolute;
     top: calc(50% - 24px);
     left: calc(50% - 40px);
