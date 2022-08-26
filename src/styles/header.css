@@ -87,27 +87,32 @@ header {
   transition: all .7s;
   position: relative;
   padding-bottom: 2px;
-  margin: 0 1rem;
+  padding: .5rem 1rem;
 }
 
-.nav-items a::after {
+.nav-items a::after:not(a:last-of-type) {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
-  background-color: rgb(148, 77, 155);
+  background-color: rgb(235, 152, 0);
   transition: all .7s;
 }
 
+.nav-items a:last-of-type {
+  border: 2px solid rgb(235, 152, 0);
+  border-radius: .5rem;
+}
+
 .nav-items a:hover {
-  color: rgb(69, 37, 71);
+  color: rgb(235, 152, 0);
 }
 
 .nav-items a:hover::after {
   width: 100%;
-  background-color: rgb(69, 37, 71);
+  background-color: rgb(235, 152, 0);
 }
 
 @media screen and (max-width: 768px) {

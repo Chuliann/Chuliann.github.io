@@ -12,18 +12,6 @@
     flex-direction: column;
 }
 
-.social-elements::after {
-    content: "";
-    display: block;
-    width: 3px;
-    height: 100px;
-    background-color: rgb(48, 40, 54);
-    margin: 0 auto;
-}
-
-#footer .social-elements {
-    display: none;
-}
 
 @media only screen and (max-width: 768px) {
     .social-elements::after {
@@ -34,10 +22,5 @@
         display: none;
     }
 
-    #footer .social-elements {
-        display: flex;
-        flex-direction: row;
-        max-width: 100px;
-        margin: 0 auto;
-    }
+    
 }

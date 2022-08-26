@@ -9,3 +9,10 @@
     font-size: 1.2rem;
     font-weight: bold;
 }
+
+#footer .social-elements {
+    display: flex;
+    flex-direction: row;
+    max-width: 100px;
+    margin: 0 auto;
+}

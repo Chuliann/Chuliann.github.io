@@ -24,8 +24,6 @@ function App() {
 
       <Proyectos />
 
-      <SocialBar />
-
       <Footer />
     </div>
   )

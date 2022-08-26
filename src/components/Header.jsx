@@ -47,6 +47,7 @@ const Header = () => {
                     <div className={`nav-items ${expandido ? "expandido" : ""}`}>
                         <a href="#">Quien soy</a>
                         <a href="#">Proyectos</a>
+                        <a href="https://drive.google.com/file/d/1c8BADxT24R1lp_YnWKXeGFOXn7IlB2mB/view?usp=sharing" target={"_blank"}>Curriculum</a>
                     </div>
                 </nav>
 
