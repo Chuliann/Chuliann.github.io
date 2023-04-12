@@ -1,0 +1,11 @@
+[
+    {
+        "nombre": "Samurai Boyz",
+        "descripcion": "Esta pagina tuve que desplegarla lo mas rapido posible y es por eso que las librerias que instale junto con las imagenes puestas (aunque esten comprimidas), lo terminaron haciendo muy pesado. Sin tener en cuenta eso, estoy muy orgulloso del diseño.",
+        "img": "samuraiboyz",
+        "ext": "png",
+        "tecnologias": ["React", "React-router", "Azure","Gulp"],
+        "enlace": "https://www.thesamuraiboyz.com",
+        "enlaceGit": null
+    }
+]

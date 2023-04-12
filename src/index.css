@@ -1,22 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "MontserratBlack";
+  src: url(./fonts/Montserrat-Black.otf);
+  font-display: swap;
+}
 @font-face {
   font-family: 'Raleway', sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap");
   font-display: swap;
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 
 :root {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
-  --paleta1: #231955;
-  --paleta2: #1F4690;
-  --paleta3: #E8AA42;
-  --paleta4: #fcedd1;
 
   --gris-oscuro: #24272e;
   --blanco: #ffffff;
@@ -25,9 +27,18 @@
   --gris-oscuro: #64748b;
   --negro: #000;
   --nav-heigth: 90px;
-  --violeta: #660085;
+  --violeta: #8902b3;
+  --crema: rgb(255, 245, 186);
+  --crema-oscuro: rgb(241, 230, 165);
   --fondo: #111016;
+  --separador-header: #16151d;
+  --modal: #fff5f5;
   --navbar: #0c0b0e;
+  --border-header: rgb(255,255,255,0.1);
+
+  --letra-sans: 'Outfit', sans-serif;
+  --letra-raleway: 'Raleway', sans-serif;
+  --letra-montserrat: "MontserratBlack";
 
   color-scheme: light dark;
 
@@ -39,11 +50,13 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-size: 1.6rem;
   background-color: var(--fondo);
   overflow-x: hidden;
   line-height: 1.3;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rubik', sans-serif;
   margin: 0;
   padding-top: var(--nav-heigth);
 }
@@ -57,17 +70,47 @@ html {
   box-sizing: inherit;
 }
 
+main {
+  flex-grow: 1;
+}
+
 h1, h2, h3, h4, p {
   margin: 0;
   color: var(--blanco);
+}
+p {
+  font-family: 'Rubik', sans-serif;
 }
 
 body.blur {
   overflow: hidden;
 }
 
+svg {
+  fill: currentColor;
+}
 
+#main {
+  
+}
 
+.agrandar {
+  transition: transform .7s ease-in-out;
+}
+.agrandar:hover {
+  transform: scale(1.05,1.05);
+}
+
+.desplazarIzquierda,
+.desplazarDerecha {
+  transition: transform .7s ease-in-out;
+}
+.desplazarIzquierda:hover {
+  transform: scale(1.1,1.1) translateX(-10px);
+}
+.desplazarDerecha:hover {
+  transform: scale(1.1,1.1) translateX(10px);
+}
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -80,4 +123,46 @@ body.blur {
 ::-webkit-scrollbar-thumb {
   background: var(--negro);
   border-radius: 10px;
+}
+
+.d-none {
+  display: none;
+}
+
+#overlay {
+  /* fijo, no importa el scroll */
+  position: fixed;
+  /* ocupa todo lo visible */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* semi transparente */
+  opacity: 0.5;
+  background: black;
+  /* invisible y arriba de todo, exceto el dialog */
+  display: none;
+  z-index: 9;
+}
+
+
+
+.separador__header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.separador__header svg {
+  position: relative;
+  display: block;
+  width: calc(300% + 1.3px);
+  height: 150px;
+}
+
+.separador__header .shape-fill {
+  fill: var(--separador-header);
 }

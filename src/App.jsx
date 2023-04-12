@@ -1,8 +1,13 @@
 import { useEffect, useState } from 'react'
-import Header from "./components/Header"
-import Proyectos from "./components/Proyectos"
-import SocialBar from "./components/SocialBar"
+import Header from "./components/Header.jsx"
+import Proyectos from "./components/Proyectos.jsx"
+
+import SocialBar from "./components/SocialBar.jsx"
+import Resume from "./resume-julian-berton.pdf"
+import Inicio from "./components/Inicio.jsx"
+import Sitios from './components/Sitios.jsx';
 import Footer from "./components/Footer"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
 
@@ -19,13 +24,18 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <Header />
+      <Router>
+        <Routes>
 
-      <Proyectos />
+          <Route element={<Header />} path="/">
+            <Route index element={<Inicio />} />
+            <Route element={null} path='services'/>
+            <Route element={<Proyectos />} path="proyects" />
+            <Route element={<Sitios />} path="websites" />
+          </Route>
 
-      <Footer />
-    </div>
+        </Routes>
+      </Router>
   )
 }
 
