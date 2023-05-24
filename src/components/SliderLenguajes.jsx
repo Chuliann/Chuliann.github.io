@@ -17,7 +17,6 @@ import "../styles/slider.css";
 const SliderLenguajes = () => {
 
 
-
     return(
         <div id="sliderLenguajes" className="">
             <div className="flex fila-rotatoria">

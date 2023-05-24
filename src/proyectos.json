@@ -1,7 +1,10 @@
 [
     {
         "nombre": "Clima",
-        "descripcion": "Este fue el primer proyecto que hice con React, utiliza una api que trae informacion del clima en una ciudad ingresada por el usuario.",
+        "descripcion": {
+            "es": "Este fue el primer proyecto que hice con React, utiliza una api que trae informacion del clima en una ciudad ingresada por el usuario.",
+            "en": ""
+        },
         "img": "clima",
         "ext": "png",
         "tecnologias": [""],
@@ -10,7 +13,10 @@
     },
     {
         "nombre": "Cotizador",
-        "descripcion": "En este mini proyecto creado con react utilizo una api para cotizar criptos en diferentes divisas.",
+        "descripcion": {
+            "es":"Este fue el primer proyecto que hice con React, utiliza una api que trae informacion del clima en una ciudad ingresada por el usuario.",
+            "en": ""
+        },
         "img": "criptomonedas",
         "ext": "png",
         "tecnologias": [""],
@@ -19,7 +25,10 @@
     },
     {
         "nombre": "Gastos semanales",
-        "descripcion": "Una aplicacion basica para controlar los gastos.",
+        "descripcion": {
+            "es": "Una aplicacion basica para controlar los gastos.",
+            "en": ""
+        },
         "img": "controlgastos",
         "ext": "png",
         "tecnologias": [""],
@@ -28,7 +37,10 @@
     },
     {
         "nombre": "Presupuesto",
-        "descripcion": "Una mejora para la anterior app, esta vez con local storage para la persistencia.",
+        "descripcion": {
+            "es": "Una mejora para la anterior app, esta vez con local storage para la persistencia",
+            "en": ""
+        },
         "img": "presupuesto",
         "ext": "png",
         "tecnologias": [""],

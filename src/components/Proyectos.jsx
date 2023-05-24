@@ -4,9 +4,8 @@ import { useState } from "react";
 
 import Proyecto from "../utils/Proyecto.jsx";
 
-const Proyectos = () => {
+const Proyectos = ({lang}) => {
     const [activo, setActivo] = useState(0);
-    
 
     return(
         <div className="contenedor_articulos">
@@ -19,6 +18,7 @@ const Proyectos = () => {
                     proyecto={proyecto} 
                     limite={proyectos.length - 1}
                     izquierda={true}
+                    lang={lang} 
                 />
             ))}
         </div>

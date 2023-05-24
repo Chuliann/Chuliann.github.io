@@ -86,15 +86,20 @@ const Main = () => {
 
                     <div className={`nav-movil ${expandido ? "expandido" : ""}`}>
                         <div className="nav-seccion-links">
-                            <NavLink to={"/"}>Inicio</NavLink>
-                            <NavLink to={"/services"}>Servicios</NavLink>
-                            <NavLink to={"/proyects"}>Proyectos</NavLink>
-                            <NavLink to={"/websites"}>Sitios web</NavLink>
+                            <NavLink onClick={handleMenu} to={"/"}>Inicio</NavLink>
+                            <NavLink onClick={handleMenu} to={"/services"}>Servicios</NavLink>
+                            <NavLink onClick={handleMenu} to={"/proyects"}>Proyectos</NavLink>
+                            <NavLink onClick={handleMenu} to={"/websites"}>Sitios web</NavLink>
                         </div>
 
                         <div className="nav-seccion-idioma">
                             <a href="#">ES</a>
                             <a href="#">EN</a>
+                        </div>
+
+                        <div className="nav-seccion-redes">
+                            <a href="https://www.linkedin.com/in/julian-berton/" className="agrandar" target={"_blank"}>{linkedin}</a>
+                            <a href="https://github.com/Chuliann" className="agrandar" target={"_blank"}>{github}</a>
                         </div>
                     </div>
                 </nav>

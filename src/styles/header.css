@@ -116,7 +116,7 @@
   }
   .nav .nav-movil .nav-seccion-links a,
   .nav .nav-movil .nav-seccion-idioma a {
-    color: black;
+    color: white;
   }
   .nav .nav-movil .nav-seccion-idioma a {
     margin: 0 .2rem;
@@ -132,23 +132,29 @@
     position: absolute;
     top: 23px;
     left: 25px;
+    border-left: none;
   }
 
   /* Expando el menu */
   .nav .nav-movil {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
-    top: 0px;
-    right: -100%;
-    width: 50%;
+    top: 0;
+    right: 0;
+    width: 100%;
+    transform: translateY(-100%);
     height: calc(100vh);
     background-color: var(--paleta4);
-    transition: all .3s ease-in-out;
+    transition: transform .3s ease-in-out;
     z-index: 1;
+    background-color: var(--navbar);
+
   }
   .nav-movil.expandido {
-    right: 0;
-    padding-top: 5rem;
+    transform: translateY(0%);
+    
   }
 
   /* Dejo las redes y le doy otro borde */
@@ -157,14 +163,21 @@
     flex-grow: initial;
     border-right: 1px solid var(--border-header);
   }
+  .nav .nav-seccion-redes {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .nav .nav-movil {
-    width: 80%;
+    
   }
-
   
+  .nav .nav-movil .nav-seccion-redes {
+    display: flex;
+    border: none;
+    justify-content: space-around;
+  }
 }
 
 
@@ -224,5 +237,6 @@
   .hamburger {
     display: block;
   }
+  
 }
 

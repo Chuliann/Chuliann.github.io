@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import Proyecto from "../utils/Proyecto.jsx";
 import sitios from "../sitios.json";
 
-const Sitios = () => {
+const Sitios = ({lang}) => {
 
     const [activo, setActivo] = useState(0);
-
+    /* Agregar links al sitio */
     useEffect(() => {
         console.log(sitios);
     }, [])
@@ -21,6 +21,7 @@ const Sitios = () => {
                     proyecto={sitio} 
                     limite={sitios.length - 1}
                     izquierda={false}
+                    lang={lang}
                 />
             ))}
         </div>

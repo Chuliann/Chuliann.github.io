@@ -58,7 +58,7 @@
 } */
 
 .fila-rotatoria {
-    animation: scroll 10s linear infinite;
+    animation: scroll 15s linear infinite;
     justify-content: space-between;
 }
 @keyframes scroll {

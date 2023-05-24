@@ -4,7 +4,7 @@ import useImage from "./useImage.jsx";
 import { Link } from "react-router-dom";
 
 
-const Proyecto = ({ proyecto, indice, setActivo, activo, limite, izquierda }) => {
+const Proyecto = ({ proyecto, indice, setActivo, activo, limite, izquierda, lang }) => {
     const { loading, error, image } = useImage(proyecto.img, proyecto.ext);
     const [direccion, setDireccion] = useState(false);
 
@@ -60,13 +60,13 @@ const Proyecto = ({ proyecto, indice, setActivo, activo, limite, izquierda }) =>
                             <p>{tecnologia}</p>
                         ))}
                     </div>
-                    <p className="descripcion">{proyecto.descripcion}</p>
+                    <p className="descripcion">{proyecto.descripcion[lang]}</p>
                 </div>
             )}
             {izquierda ? (
                 <div className="article-description-section">
                     <Link className="agrandar" to="/websites">Sitios {rightArrow}</Link>
-                    <p className="descripcion">{proyecto.descripcion}</p>
+                    <p className="descripcion">{proyecto.descripcion[lang]}</p>
                 </div>
             ) : (
                 <div className="article-image-section">

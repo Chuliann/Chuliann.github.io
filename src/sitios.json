@@ -1,7 +1,10 @@
 [
     {
         "nombre": "Samurai Boyz",
-        "descripcion": "Esta pagina tuve que desplegarla lo mas rapido posible y es por eso que las librerias que instale junto con las imagenes puestas (aunque esten comprimidas), lo terminaron haciendo muy pesado. Sin tener en cuenta eso, estoy muy orgulloso del diseño.",
+        "descripcion": {
+            "es": "Esta fue la primer pagina web para la que me contrataron, era un proyecto nft. En principio ibamos a hacer muchas mas cosas pero el proyecto no funciono. Utiliza una api de phantom wallet y una de solana.",
+            "en": "This was the first website I was hired for, it was an NFT project. Initially, we were going to do many more things, but the project didn't work out. We used an API from Phantom Wallet and one from Solana."
+        },
         "img": "samuraiboyz",
         "ext": "png",
         "tecnologias": ["React", "React-router", "Azure","Gulp"],

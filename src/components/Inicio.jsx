@@ -1,12 +1,11 @@
-import SliderLenguajes from "./SliderLenguajes.jsx"
+
 import Hero from "../components/Hero.jsx"
 
-const Inicio = () => {
+const Inicio = ({lang}) => {
     return ( 
         <>
-            <Hero />
-            <SliderLenguajes />
-            
+            <Hero lang={lang}/>
+                     
         </>
      );
 }

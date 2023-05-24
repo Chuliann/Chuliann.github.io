@@ -1,12 +1,13 @@
 import "../styles/hero.css";
 import herochulian from "../img/herochulian2.png";
+import {heroIdioma} from "../utils/idiomas.js"; 
 
-const Hero = () => {
+const Hero = ({lang}) => {
     return (
         <div className="hero">
             <div className="hero_content">
                 <h2 className="">
-                    <span>Mi nombre es julian berton </span> <br></br>y creo
+                    <span> {heroIdioma[lang]["tituloMorado"]}</span> <br></br>y creo
                     cosas para la web
                 </h2>
                 <p>
