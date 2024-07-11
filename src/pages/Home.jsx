@@ -14,8 +14,8 @@ const Home = () => {
             {/* Inicio */}
             <div className="h-screen flex flex-col md:flex-row relative items-center justify-center gap-16 px-2 md:px-0 py-10 md:py-20 overflow-hidden">
                 {/* Imagen */}
-                <div className="w-[500px] md:w-1/2">
-                    <img className="object-cover w-100 h-100 -translate-x-40 md:-translate-x-0" src={hero} />
+                <div className="w-[700px] md:w-1/2">
+                    <img className="object-cover w-100 h-100 -translate-x-44 md:-translate-x-0" src={hero} />
                     <div className="hero_overlay"></div>
                 </div>
 

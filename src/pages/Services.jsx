@@ -2,11 +2,11 @@ import { ClipboardDocumentCheckIcon, CodeBracketIcon, CogIcon } from '@heroicons
 
 const Services = () => {
     return ( 
-        <div className="p-2 pt-9 md:pt-20 w-full montserrat">
+        <div className="p-2 pt-9 md:pt-24 w-full montserrat">
             <h1 className="text-center text-3xl font-bold uppercase">Servicios</h1>
 
             {/* Servicios */}
-            <div className="py-20 md:pt-10 gap-44 md:gap-10 flex-col flex md:flex-row justify-center items-center w-full md:w-5/6  m-auto">
+            <div className="py-20 lg:pt-10 gap-44 md:gap-10 flex-col flex md:flex-row justify-center items-center w-full md:w-5/6  m-auto">
 
                 {/* Servicio Desarrollo Web Completo */}
                 <div data-aos="fade-right" className="service flex flex-col items-center gap-2 text-center">
