@@ -8,6 +8,7 @@ const Header = () => {
 
     const isHome = location.pathname === '/';
 
+    
     const goTo = (route) => {
         navigate(route)
     }
