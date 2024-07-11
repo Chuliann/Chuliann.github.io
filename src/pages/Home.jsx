@@ -5,6 +5,7 @@ const Home = () => {
     return ( 
         <div className="relative">
 
+
             {/* Version */}
             <div className={`absolute right-1 bottom-1 montserrat p-1`}>
                 <p>v0.3</p>
