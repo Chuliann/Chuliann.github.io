@@ -19,8 +19,12 @@ function App() {
   useEffect(() => {
     AOS.init()
 
-  
-    window.addEventListener('load', handleLoad);
+    // Check document readiness
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
 
     return () => {
       window.removeEventListener('load', handleLoad);
