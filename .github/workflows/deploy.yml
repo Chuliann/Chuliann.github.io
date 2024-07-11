@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Cambia esto a la rama que prefieras usar
+      - ghpages  # Cambia esto a la rama que prefieras usar
 
 jobs:
   build-and-deploy:
