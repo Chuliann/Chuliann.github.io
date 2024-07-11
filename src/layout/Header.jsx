@@ -52,7 +52,7 @@ const Header = () => {
             <footer className="w-full flex justify-end">
                 {/* Version */}
                 <div className={`${isHome ? "hidden" : ""} montserrat p-1`}>
-                    <p>v0.3</p>
+                    <p>v0.3.5</p>
                 </div>
             </footer>
         </div>

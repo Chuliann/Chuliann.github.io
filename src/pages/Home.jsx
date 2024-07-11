@@ -1,4 +1,4 @@
-import hero from "../assets/techhero1.png"
+import hero from "../assets/techhero2.png"
 
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
 
             {/* Version */}
             <div className={`absolute right-1 bottom-1 montserrat p-1`}>
-                <p>v0.3</p>
+                <p>v0.3.5</p>
             </div>
 
             {/* Inicio */}

@@ -18,7 +18,6 @@ function App() {
 
   useEffect(() => {
     AOS.init()
-
     // Check document readiness
     if (document.readyState === 'complete') {
       handleLoad();
