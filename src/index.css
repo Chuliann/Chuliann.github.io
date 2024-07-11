@@ -33,3 +33,47 @@
 @tailwind components;
 @tailwind utilities;
 
+.loading-screen {
+  position: fixed; /* Cambiado a fixed para que cubra toda la pantalla */
+  width: 100%;
+  height: 100vh;
+  background-color: #141414;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-text {
+  font-weight: bold;
+  color: #febc59;
+  font-size: 4rem;
+  text-align: center;
+  position: relative;
+  border-radius: 50%;
+  padding: 8px;
+  overflow: hidden; /* Necesario para ocultar la parte que se llena */
+}
+
+.loading-text::before {
+  content: 'JB';
+  position: absolute;
+  left: 0;
+  padding: 8px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #febc59;
+  color: #141414;
+  overflow: hidden;
+  animation: fill-animation 3s forwards;
+}
+
+@keyframes fill-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

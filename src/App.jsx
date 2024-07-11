@@ -4,18 +4,41 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css'
 import 'normalize.css';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
 
+
+  const handleLoad = () => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  };
 
   useEffect(() => {
     AOS.init()
+
+  
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
   }, [])
 
   return (
     <>
-      <RouterProvider router={router} />
+      {isLoading ? (
+        <div className="loading-screen">
+          <div className="loading-text">
+            <span className="loading-fill">JB</span>
+          </div>
+        </div>
+      ) : (
+        <RouterProvider router={router} />
+      )}
+
     </>
   )
 }
