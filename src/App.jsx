@@ -1,49 +1,31 @@
-import { RouterProvider } from "react-router-dom";
-import router from "./router/router.jsx"
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import './App.css'
-import 'normalize.css';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Now from "./components/Now";
+import Footer from "./components/Footer";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-
-  const handleLoad = () => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  };
-
   useEffect(() => {
-    AOS.init()
-    // Check document readiness
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      window.addEventListener('load', handleLoad);
-    }
-
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
-  }, [])
+    AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  }, []);
 
   return (
-    <>
-      {isLoading ? (
-        <div className="loading-screen">
-          <div className="loading-text">
-            <span className="loading-fill">JB</span>
-          </div>
-        </div>
-      ) : (
-        <RouterProvider router={router} />
-      )}
-
-    </>
-  )
+    <div className="relative min-h-screen overflow-x-clip">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Now />
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
